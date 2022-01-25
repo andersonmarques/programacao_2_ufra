@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./src/exercicio/view_ui",
+        "./src/exercicio/view_ui"
+    ]
+}
