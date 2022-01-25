@@ -1,2 +1,2 @@
-# programacao_2_ufra
+# Técnicas de programação II UFRA Capanema - PA
 Repositório da disciplina Técnicas de programação II
