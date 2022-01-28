@@ -271,7 +271,7 @@ QPushButton{
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 170, 127);</string>
+       <string notr="true">background-color: rgb(225, 225, 225);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -287,6 +287,9 @@ QPushButton{
          <width>611</width>
          <height>341</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
        </property>
        <column>
         <property name="text">

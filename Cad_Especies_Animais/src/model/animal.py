@@ -9,7 +9,6 @@ class Animal:
         self.classificacao = classificacao
         self.habitat = habitat
         self.erro = ''
-        # self.lista_subespecie = None
 
     @property
     def id(self):
@@ -46,39 +45,12 @@ class Animal:
         return self.__especie
 
     @especie.setter
-    def especie(self, especie):        
-        # if especie == 'Aves':
-        #     self.__especie = especie
-        #     self.lista_subespecie = ['Gaivota', 'Andorinha', 'Gavião']
-        # elif especie == 'Anfíbio':
-        #     self.__especie = especie
-        #     self.lista_subespecie = ['Salamandra', 'Sapo', 'Perereca']
-        # elif especie == 'Mamífero':
-        #     self.__especie = especie
-        #     self.lista_subespecie = ['Vaca', 'Porco', 'Cachorro']
-        # elif especie == 'Peixe':
-        #     self.__especie = especie
-        #     self.lista_subespecie = ['Tamuata', 'Pirarucu','Pescada Amarela']
-        # elif especie == 'Réptil':
-        #     self.__especie = especie
-        #     self.lista_subespecie = ['Jacaré', 'Crocodilo','Cobra']
+    def especie(self, especie):               
         if especie == '---':
             self.erro = 'O campo especie é obrigatório.'
         else:
             self.__especie = especie
-    
-    # @property
-    # def lista_subespecie(self):
-    #     return self.__lista_subespecie
-
-    # @lista_subespecie.setter
-    # def lista_subespecie(self, lista):
-    #     if lista == None or len(lista) == 0:
-    #         self.__lista_subespecie = []
-    #     else:
-    #         lista.insert(0, '---')
-    #         self.__lista_subespecie = lista
-
+        
     @property
     def subespecie(self):
         return self.__subespecie
@@ -112,3 +84,6 @@ class Animal:
             self.erro = 'O campo habitat é obrigatório.'
         else:
             self.__habitat = habitat
+
+    def __str__(self) -> str:
+        return f'Animal: {self.id} | {self.subespecie}'

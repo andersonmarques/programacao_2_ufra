@@ -1,0 +1,10 @@
+1|a1|1|Aves|Gaivota|Vertebrado|Marinho
+1|a1|1|Aves|Gaivota|Vertebrado|Marinho
+2|a2|1|Aves|Gaivota|Vertebrado|Terrestre
+1|a1|1|Aves|Gaivota|Vertebrado|Marinho
+2|a2|1|Aves|Gaivota|Vertebrado|Terrestre
+3|a3|1|Aves|Gaivota|Vertebrado|Marinho
+1|a1|1|Aves|Gaivota|Vertebrado|Marinho
+2|a2|1|Aves|Gaivota|Vertebrado|Terrestre
+3|a3|1|Aves|Gaivota|Vertebrado|Marinho
+4|a4|1|Aves|Andorinha|Vertebrado|Marinho
