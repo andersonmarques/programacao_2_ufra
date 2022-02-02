@@ -1,0 +1,1 @@
+# nao V = F; nao F = V

@@ -1,10 +1,4 @@
-1|a1|1|Aves|Gaivota|Vertebrado|Marinho
-1|a1|1|Aves|Gaivota|Vertebrado|Marinho
-2|a2|1|Aves|Gaivota|Vertebrado|Terrestre
-1|a1|1|Aves|Gaivota|Vertebrado|Marinho
-2|a2|1|Aves|Gaivota|Vertebrado|Terrestre
-3|a3|1|Aves|Gaivota|Vertebrado|Marinho
-1|a1|1|Aves|Gaivota|Vertebrado|Marinho
-2|a2|1|Aves|Gaivota|Vertebrado|Terrestre
-3|a3|1|Aves|Gaivota|Vertebrado|Marinho
-4|a4|1|Aves|Andorinha|Vertebrado|Marinho
+1|a|2|Mamífero|Vaca|Vertebrado|Aereo
+2|b|2|Mamífero|Vaca|Vertebrado|Aereo
+3|c|2|Mamífero|Vaca|Vertebrado|Aereo
+4|dd|2|Mamífero|Vaca|Vertebrado|Aereo
