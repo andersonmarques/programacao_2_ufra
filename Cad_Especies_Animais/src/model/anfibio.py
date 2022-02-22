@@ -1,0 +1,2 @@
+class Anfibio:
+    pass

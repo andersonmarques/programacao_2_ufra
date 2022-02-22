@@ -1,44 +1,19 @@
 class Animal:
-    def __init__(self, id = None, nome = None, idade = None, especie = None, 
-    subespecie = None, classificacao = None, habitat = None) -> None:
-        self.id = id
-        self.nome = nome
-        self.idade = idade
+    def __init__(self, genero = None, especie = None, subespecie = None) -> None:
+        self.genero = genero
         self.especie = especie
         self.subespecie = subespecie
-        self.classificacao = classificacao
-        self.habitat = habitat
-        self.erro = ''
 
     @property
-    def id(self):
-        return self.__id
+    def genero(self):
+        return self.__genero
 
-    @id.setter
-    def id(self, id):
-        self.__id = id
-
-    @property
-    def nome(self):
-        return self.__nome
-
-    @nome.setter
-    def nome(self, nome):
-        if nome is not None and len(nome) != 0:
-            self.__nome = nome
+    @genero.setter
+    def genero(self, genero):
+        if genero is not None and not genero:
+            self.__genero = genero
         else:
-            self.erro = 'O campo nome é obrigatório.'
-
-    @property
-    def idade(self):
-        return self.__idade
-
-    @idade.setter
-    def idade(self, idade):
-        if idade is not None and int(idade) > -1:
-            self.__idade = idade
-        else:
-            self.erro = 'O campo idade é obrigatório.'
+            self.erro = 'O campo genero é obrigatório.'
 
     @property
     def especie(self):
@@ -62,28 +37,3 @@ class Animal:
             self.erro = 'O campo subespecie é obrigatório.'
         else:
             self.__subespecie = subespecie
-
-    @property
-    def classificacao(self):
-        return self.__classificacao
-
-    @classificacao.setter
-    def classificacao(self, classificacao):
-        if classificacao == '---':
-            self.erro = 'O campo classificacao é obrigatório.'
-        else:
-            self.__classificacao = classificacao
-
-    @property
-    def habitat(self):
-        return self.__habitat
-
-    @habitat.setter
-    def habitat(self, habitat):
-        if habitat == '---':
-            self.erro = 'O campo habitat é obrigatório.'
-        else:
-            self.__habitat = habitat
-
-    def __str__(self) -> str:
-        return f'Animal: {self.id} | {self.subespecie}'

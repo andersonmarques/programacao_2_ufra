@@ -2,7 +2,7 @@ import sys
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QMainWindow, QApplication
 from controller.gerenciador_animais import Gerenciador_Animais
-from model.animal import Animal
+from model.s_animal import S_Animal
 from view.gui_qt import Ui_MainWindow
 
 class Principal(QMainWindow, Ui_MainWindow):
@@ -44,7 +44,7 @@ class Principal(QMainWindow, Ui_MainWindow):
                     classificacao = vetor_partes_animal[5]
                     habitat = vetor_partes_animal[6]
                     #criando um novo obj do tipo Animal
-                    animal = Animal(id, nome, idade, especie, subespecie, classificacao, habitat)
+                    animal = S_Animal(id, nome, idade, especie, subespecie, classificacao, habitat)
                     #salvar o novo animal na lista
                     self.gerenciador.salvar_animal(animal)
         
@@ -63,7 +63,7 @@ class Principal(QMainWindow, Ui_MainWindow):
         self.atualizar_msg(msg, self.cor_sucesso)
 
     def salvar_animal(self):
-        animal = Animal()
+        animal = S_Animal()
         animal.nome = self.lineEdit_nome.text()
         animal.idade = self.spinBox_idade.text()# tudo que o usuario digitar via GUI é uma String
         animal.especie = self.comboBox_especies_animais.currentText()

@@ -1,0 +1,16 @@
+fifo = []
+fifo.append(0)
+fifo.append(1)
+fifo.append(2)
+fifo.append(3)
+print(fifo)
+fifo.append(8)
+fifo.append(14)
+print(fifo)
+fifo.pop()
+fifo.pop()
+print(fifo)
+fifo.pop()
+fifo.pop()
+print(fifo)
+

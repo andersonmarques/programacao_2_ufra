@@ -9,10 +9,9 @@ fila.append("Banana")
 fila.append("Maçã")
 fila.append("Pera")
 fila.append("Uva")
-print("Adicionando um elemento: ", fila)
+print("Adicionado elementos: ", fila)
 
 # Remove o primeiro elemento adicionado à fila.
-fila.popleft()
 fila.popleft()
 fila.popleft()
 fila.popleft()

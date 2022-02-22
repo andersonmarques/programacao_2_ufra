@@ -17,4 +17,4 @@ lista.insert(0, 'pri')
 
 lista.insert(2, 'd')
 
-
+print(lista)
