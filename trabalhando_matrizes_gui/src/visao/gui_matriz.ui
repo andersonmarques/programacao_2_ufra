@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>681</width>
+    <height>444</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_fundo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>681</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(197, 255, 175);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTextEdit" name="text_edit_matriz">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>30</y>
+       <width>281</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(236, 236, 236);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Matriz:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_msg">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>641</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(236, 236, 236);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="text_edit_saida">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>641</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(236, 236, 236);</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="line_edit_numero">
+     <property name="geometry">
+      <rect>
+       <x>472</x>
+       <y>40</y>
+       <width>181</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(236, 236, 236);</string>
+     </property>
+     <property name="placeholderText">
+      <string>Digite um Numero Real</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="push_button_soma_diag_prin">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>70</y>
+       <width>181</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(236, 236, 236);</string>
+     </property>
+     <property name="text">
+      <string>Somar Diag Principal</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="push_button_soma_matriz">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>100</y>
+       <width>181</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(236, 236, 236);</string>
+     </property>
+     <property name="text">
+      <string>Somar Matriz</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
