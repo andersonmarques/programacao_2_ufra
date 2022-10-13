@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>681</width>
+    <width>580</width>
     <height>444</height>
    </rect>
   </property>
@@ -19,12 +19,12 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>681</width>
+      <width>581</width>
       <height>441</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(197, 255, 175);</string>
+     <string notr="true">background-color: rgb(197, 225, 175);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -37,8 +37,8 @@
       <rect>
        <x>80</x>
        <y>30</y>
-       <width>281</width>
-       <height>151</height>
+       <width>201</width>
+       <height>141</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -58,28 +58,12 @@
       <string>Matriz:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_msg">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>200</y>
-       <width>641</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(236, 236, 236);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
     <widget class="QTextEdit" name="text_edit_saida">
      <property name="geometry">
       <rect>
        <x>20</x>
        <y>230</y>
-       <width>641</width>
+       <width>541</width>
        <height>201</height>
       </rect>
      </property>
@@ -87,53 +71,141 @@
       <string notr="true">background-color: rgb(236, 236, 236);</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="line_edit_numero">
+    <widget class="QFrame" name="frame_botoes">
      <property name="geometry">
       <rect>
-       <x>472</x>
-       <y>40</y>
-       <width>181</width>
-       <height>20</height>
+       <x>290</x>
+       <y>20</y>
+       <width>271</width>
+       <height>151</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(236, 236, 236);</string>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
      </property>
-     <property name="placeholderText">
-      <string>Digite um Numero Real</string>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
      </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="line_edit_numero">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="placeholderText">
+         <string>Digite um Numero Real</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="push_button_soma_matriz">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>( + ) Somar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="push_button_multiplicar_matriz">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>( * ) Multiplicar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="push_button_transposta">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>Transposta</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="push_button_soma_diag_prin">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>Somar Diag Principal</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="push_button_soma_diag_sec">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>Somar Diag Secundária</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <widget class="QPushButton" name="push_button_soma_diag_prin">
+    <widget class="QFrame" name="frame_msg">
      <property name="geometry">
       <rect>
-       <x>470</x>
-       <y>70</y>
-       <width>181</width>
-       <height>23</height>
+       <x>20</x>
+       <y>180</y>
+       <width>541</width>
+       <height>41</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(236, 236, 236);</string>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
      </property>
-     <property name="text">
-      <string>Somar Diag Principal</string>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
      </property>
-    </widget>
-    <widget class="QPushButton" name="push_button_soma_matriz">
-     <property name="geometry">
-      <rect>
-       <x>470</x>
-       <y>100</y>
-       <width>181</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(236, 236, 236);</string>
-     </property>
-     <property name="text">
-      <string>Somar Matriz</string>
-     </property>
+     <widget class="QLabel" name="label_msg">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>471</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(236, 236, 236);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="push_button_fechar_msg">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>10</y>
+        <width>41</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-radius: 8px;
+}
+QPushButton:hover{
+	background-color: rgb(50, 50, 50);
+	color: rgb(200, 200, 200);
+}
+QPushButton:pressed{
+	background-color: rgb(35, 35, 35);
+	color: rgb(200, 200, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
