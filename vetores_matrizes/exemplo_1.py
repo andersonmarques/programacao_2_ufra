@@ -22,12 +22,12 @@ print(type(arr))
 # U - unicode string
 # V - fixed chunk of memory for other type ( void )
 
-arr2 = np.array(('1', 2, 3, 4, 5), dtype='i')
+arr2 = np.array(('1abcd', 2, 3, 4, 5), dtype='S')
 print(type(arr2))
 print(arr2.dtype)
 print("-------------")
 print(np.arange(4))
 
-for i in arr:
+for i in arr2:
     print(i)
 

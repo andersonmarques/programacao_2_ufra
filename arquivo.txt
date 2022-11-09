@@ -1,0 +1,7 @@
+1|Rex|3|Mamífero|Cachorro|Vertebrado|Terrestre
+2|Teste|3|Mamífero|Cachorro|Vertebrado|Terrestre
+2|Teste|3|Mamífero|Cachorro|Vertebrado|Terrestre
+3|ttttt|2|Mamífero|Porco|Vertebrado|Marinho
+4|ttttt|2|Mamífero|Porco|Vertebrado|Marinho
+5|ttttt|2|Mamífero|Porco|Vertebrado|Marinho
+6|ttttt|2|Mamífero|Porco|Vertebrado|Marinho
