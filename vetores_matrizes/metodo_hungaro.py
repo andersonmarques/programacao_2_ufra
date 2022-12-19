@@ -1,19 +1,19 @@
 import sys
 INT_MAX = sys.maxsize
 
-def find_minRow(cost_matrix, n):
+def encontrar_menores_linhas(cost_matrix, n):
 	_min = [];
 	for i in range(n):
 		_min.append(min(cost_matrix[i]))
 	return _min
 
-def find_minCol(cost_matrix, n):
+def encontrar_menores_colunas(cost_matrix, n):
 	_min = [];
 	for i in range(n):
 		min_ = INT_MAX
 		for j in range(n):
 			min_ = min(min_, cost_matrix[j][i])
-		_min.append(min(cost_matrix[i]))
+		_min.append(min_)
 	return _min
 
 def subtractMinRow(cost_matrix, minEachRow, n):
@@ -104,13 +104,14 @@ def findAllocation(cost_matrix, n):
 	return allocation
 
 def hungarianAllocation(cost_matrix, n):
-	print('-------- minEachRow ---------')
-	minEachRow = find_minRow(cost_matrix, n)
+	print('-------- Passo 1: min_Each_Row ---------')
+	minEachRow = encontrar_menores_linhas(cost_matrix, n)
 	print(minEachRow)
-	print('------------------\n')
-	cost_matrix = subtractMinRow(cost_matrix, minEachRow, n)
 	
-	minEachCol = find_minCol(cost_matrix, n)
+	cost_matrix = subtractMinRow(cost_matrix, minEachRow, n)
+	print('-------- Passo 2: min_Each_Col ---------')
+	minEachCol = encontrar_menores_colunas(cost_matrix, n)
+	print(minEachCol)
 	cost_matrix = subtractMinCol(cost_matrix, minEachCol, n)
 	
 	while 1:
@@ -139,15 +140,18 @@ def hungarianAllocation(cost_matrix, n):
 			continue
 
 #n = int(raw_input())
-n = 5
+n = 3
 cost_matrix = [
-	[10,3,3,2,8],
-	[9,7,8,2,7],
-	[7,5,6,2,4],
-	[3,5,8,2,4],
-	[9,10,9,6,10]
+	# [10,3,3,2,8],
+	# [9,7,8,2,7],
+	# [7,5,6,2,4],
+	# [3,5,8,2,4],
+	# [9,10,9,6,10]
+	[53, 96, 37],
+	[47, 87, 41],
+	[60, 92, 36]
 ]
 
 #print cost_matrix
 allocation = {}
-allocation = hungarianAllocation(cost_matrix, n)
+allocation = hungarianAllocation(cost_matrix, n), 

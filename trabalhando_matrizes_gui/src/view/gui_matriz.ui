@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>571</width>
+    <height>491</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_fundo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>571</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(197, 225, 175);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTextEdit" name="text_edit_saida">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>360</y>
+       <width>541</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(236, 236, 236);</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_msg">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>20</y>
+       <width>441</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_msg">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>371</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(236, 236, 236);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="push_button_fechar_msg">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>10</y>
+        <width>41</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-radius: 8px;
+}
+QPushButton:hover{
+	background-color: rgb(50, 50, 50);
+	color: rgb(200, 200, 200);
+}
+QPushButton:pressed{
+	background-color: rgb(35, 35, 35);
+	color: rgb(200, 200, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>541</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="6" column="4">
+       <widget class="QPushButton" name="push_button_soma_diag_prin_B">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>Somar Diag Principal (B)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2" colspan="2">
+       <widget class="QPushButton" name="push_button_subtratir">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>( - ) Subtrair</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Matriz A:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2" colspan="2">
+       <widget class="QPushButton" name="push_button_elem_matriz_produto">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>Elem matriz produto</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QPushButton" name="push_button_soma_diag_prin_A">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>Somar Diag Principal (A)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2" colspan="2">
+       <widget class="QPushButton" name="push_button_somar">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>( + ) Somar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2" colspan="2">
+       <widget class="QPushButton" name="push_button_multiplicar">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>( * ) Multiplicar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Matriz B:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2" colspan="2">
+       <widget class="QLineEdit" name="line_edit_posicao_mn">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="placeholderText">
+         <string>Digite a posição m,n</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QPushButton" name="push_button_transposta_A">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>A Transposta</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4" rowspan="5">
+       <widget class="QTextEdit" name="text_edit_matriz_b">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="4">
+       <widget class="QPushButton" name="push_button_soma_diag_sec_B">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>Somar Diag Secundária (B)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" rowspan="5">
+       <widget class="QTextEdit" name="text_edit_matriz_a">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QPushButton" name="push_button_soma_diag_sec_A">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>Somar Diag Secundária(A)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="4">
+       <widget class="QPushButton" name="push_button_transposta_B">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>B Transposta</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QPushButton" name="push_button_det_A">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>Det A</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="4">
+       <widget class="QPushButton" name="push_button_det_B">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(236, 236, 236);</string>
+        </property>
+        <property name="text">
+         <string>Det B</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="label_logo">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>81</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Logo</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

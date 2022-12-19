@@ -1,6 +1,6 @@
 import sys
 from PyQt6 import QtWidgets
-from PyQt6.QtGui import QIcon
+from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.QtWidgets import QApplication, QMainWindow
 from controller.gerenciador_projeto import Gerenciador_Projeto
 from model.projeto import Projeto
@@ -17,7 +17,7 @@ class Principal (QMainWindow, Ui_MainWindow):
         self.frame_msg.hide()
         # self.label_logo.setPixmap(QPixmap('img/logo.png'))
         self.setWindowTitle('Cadastro de projetos')
-        # self.label_logo.setPixmap(QPixmap(r'img\ft.png'))
+        self.label_logo.setPixmap(QPixmap(r'img\logo.png'))
         self.setWindowIcon(QIcon(r'img\icone.png'))
         self.pushButton_msg.clicked.connect(lambda: self.frame_msg.hide())
         self.pushButton_cadastrar.clicked.connect(self.cadastrar_projeto)
