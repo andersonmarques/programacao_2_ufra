@@ -6,7 +6,7 @@ from math import pow
 class Matriz_controle:
     
     def __init__(self) -> None:
-        self.erro = ""
+        self.erro = ""# 
         self.__voz = Voz()
 
     def somar_diagonal_principal(self, M: Matriz) -> float:

@@ -44,7 +44,7 @@ class Principal (QMainWindow, Ui_MainWindow):
         self.push_button_somar.clicked.connect(self.somar_view)
         self.push_button_subtratir.clicked.connect(self.subtrair_view)
         self.push_button_multiplicar.clicked.connect(self.multiplicar_view)
-        self.push_button_hungaro_A.clicked.connect(self.preparar_hungaro)
+        # self.push_button_hungaro_A.clicked.connect(self.preparar_hungaro)
     
     def diagonal_prin_view(self, nome_matriz:str):
         resultado = ''
