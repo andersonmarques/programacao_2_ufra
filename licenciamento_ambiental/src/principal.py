@@ -11,13 +11,14 @@ class Principal (QMainWindow, Ui_MainWindow):
     def __init__(self, parent = None) -> None:
         super().__init__(parent)
         super().setupUi(self)
+        self.frame_msg.hide()
         logo = QPixmap('img/ufra_logo.png')#criando o obj da imagem
         logo = logo.scaled(self.label_logo_emp.width(),
                            self.label_logo_emp.height(), 
                            Qt.AspectRatioMode.KeepAspectRatio)
         self.label_logo_emp.setPixmap(logo)#enviando a imagem ao label
         self.push_button_salvar.clicked.connect(self.salvar_lista)
-        self.push_button_fechar.clicked.connect(lambda: self.frame_msg.hide())
+        self.push_button_fechar.clicked.connect(lambda : self.frame_msg.hide())
         self.lista = []
         
     def salvar_lista(self):
