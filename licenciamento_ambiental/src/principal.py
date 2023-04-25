@@ -11,7 +11,8 @@ class Principal (QMainWindow, Ui_MainWindow):
     def __init__(self, parent = None) -> None:
         super().__init__(parent)
         super().setupUi(self)
-        self.frame_msg.hide()
+        self.frame_msg.hide()        
+        self.cor_erro = "background-color: rgb(250, 185, 185);"
         logo = QPixmap('img/ufra_logo.png')#criando o obj da imagem
         logo = logo.scaled(self.label_logo_emp.width(),
                            self.label_logo_emp.height(), 
@@ -28,10 +29,19 @@ class Principal (QMainWindow, Ui_MainWindow):
         
         diagnostico = Diagnostico_Ambiental(empreendimento,
                                             matricula,
-                                            area)        
-        self.lista.append(diagnostico)
-        #self.imprime_mensagem()
-        self.atualizar_tabela()
+                                            area) 
+        if not diagnostico.erro:
+            self.lista.append(diagnostico)
+            self.atualizar_tabela()
+            diagnostico.erro = ''
+            self.frame_msg.hide()
+        else:
+            self.mostrar_msg_erro(diagnostico.erro)
+
+    def mostrar_msg_erro(self, msg):
+        self.frame_msg.show()
+        self.label_msg.setText(msg)
+        self.label_msg.setStyleSheet(self.cor_erro)
 
     def atualizar_tabela(self):
         self.table_widget_saida.setRowCount(0)
@@ -43,7 +53,7 @@ class Principal (QMainWindow, Ui_MainWindow):
             self.table_widget_saida.setItem(num_linhas, 1, 
             QtWidgets.QTableWidgetItem(obj.matricula))
             self.table_widget_saida.setItem(num_linhas, 2, 
-            QtWidgets.QTableWidgetItem(obj.area))
+            QtWidgets.QTableWidgetItem(str(obj.area)))
             num_linhas += 1
 
 
