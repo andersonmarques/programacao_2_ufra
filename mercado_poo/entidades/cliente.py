@@ -123,3 +123,9 @@ class Cliente:
             self.__categoria = categoria
         else:
             self.erro_validacao = 'O campo "Categoria" é obrigatório!'
+
+    def __str__(self) -> str:
+        return f'Nome: {self.nome}'
+
+cliente = Cliente('João', '17110602087', 'Rua A', 'Centro', 'teste@teste.com', '999999999', 'Cliente')
+print(cliente)
