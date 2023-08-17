@@ -50,7 +50,8 @@ class Principal (QMainWindow, Ui_MainWindow):
         linha_tabela = 0
         self.tableWidget_saida.setRowCount(len(self.gerenciador.pilha))
         for projeto in self.gerenciador.pilha:
-            self.tableWidget_saida.setItem(linha_tabela, 0, QtWidgets.QTableWidgetItem(projeto.identificacao))
+            self.tableWidget_saida.
+            setItem(linha_tabela, 0, QtWidgets.QTableWidgetItem(projeto.identificacao))
             self.tableWidget_saida.setItem(linha_tabela, 1, QtWidgets.QTableWidgetItem(projeto.custo_obra))
             linha_tabela += 1
 

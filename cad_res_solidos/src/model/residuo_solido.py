@@ -1,7 +1,6 @@
+
 class Residuo_Solido:
-    def __init__(self, material = None, 
-                 quant = None,
-                 organico = None):
+    def __init__(self, material = None, quant = None, organico = None) -> None:
         self.error = ''
         self.material = material
         self.quantidade = quant
@@ -25,7 +24,7 @@ class Residuo_Solido:
     @quantidade.setter
     def quantidade(self, quantidade):
         if quantidade == 0:
-            self.error = 'A "quantidade" é obrigatória'
+            self.error = 'A "quantidade" é obrigatória!'
         else:
             self.__quantidade = quantidade
 
@@ -40,8 +39,12 @@ class Residuo_Solido:
         else:
             self.__organico = organico
 
-    def __str__(self):
-        return f"  material: {self.material} | quantidade: {self.quantidade} | orgânico: {self.organico}"
+    def __str__(self) -> str:
+        is_organico = 'sim' if self.organico else 'não'
+        return f'Material: {self.material} | \
+Quantidade: {self.quantidade} | \
+É organico? {is_organico}'
 
-residuo = Residuo_Solido('Papel', 1, False)
-print(residuo)
+
+# var_ref = Residuo_Solido('Papel', 10, False)
+# print(var_ref)

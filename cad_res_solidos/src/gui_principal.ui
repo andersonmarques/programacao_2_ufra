@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_login">
      <widget class="QFrame" name="frame_2">
@@ -68,8 +68,23 @@
        </item>
        <item row="0" column="1">
         <widget class="QLabel" name="label_icon_login">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>141</width>
+           <height>141</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(170, 255, 255);</string>
+         </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -163,8 +178,8 @@
      <widget class="QFrame" name="frame_4">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
+        <x>20</x>
+        <y>90</y>
         <width>811</width>
         <height>281</height>
        </rect>
@@ -188,7 +203,7 @@
         <string>Cadastrar</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="push_button_listar">
        <property name="geometry">
         <rect>
          <x>340</x>
@@ -243,13 +258,13 @@
      </widget>
     </widget>
     <widget class="QWidget" name="page_listar_materiais">
-     <widget class="QFrame" name="frame_5">
+     <widget class="QFrame" name="frame_tabela">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>20</y>
         <width>831</width>
-        <height>371</height>
+        <height>431</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -258,76 +273,123 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QTableWidget" name="tableWidget">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>40</y>
-         <width>651</width>
-         <height>301</height>
-        </rect>
-       </property>
-       <column>
-        <property name="text">
-         <string>Material</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Quantidade (kg)</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Organico</string>
-        </property>
-       </column>
-      </widget>
-      <widget class="QFrame" name="frame_6">
-       <property name="geometry">
-        <rect>
-         <x>700</x>
-         <y>50</y>
-         <width>117</width>
-         <height>291</height>
-        </rect>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QPushButton" name="pushButton_6">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="2">
+        <widget class="QFrame" name="frame_acao">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QPushButton" name="push_button_voltar">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Home</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="push_button_alterar">
+            <property name="text">
+             <string>Alterar</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="push_button_deletar">
+            <property name="text">
+             <string>Excluir</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="2">
+        <widget class="QLabel" name="label_topo_page_listar">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>100</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Resíduos Sólidos Cadastrados&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_logo_page_listar">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>200</horstretch>
+           <verstretch>200</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QTableWidget" name="table_widget_residuos">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <column>
           <property name="text">
-           <string>PushButton</string>
+           <string>Material</string>
           </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_7">
+         </column>
+         <column>
           <property name="text">
-           <string>PushButton</string>
+           <string>Quantidade (kg)</string>
           </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
+         </column>
+         <column>
+          <property name="text">
+           <string>Organico</string>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-      </widget>
+         </column>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_cadastrar_materiais">
@@ -336,7 +398,7 @@
        <rect>
         <x>30</x>
         <y>30</y>
-        <width>791</width>
+        <width>811</width>
         <height>241</height>
        </rect>
       </property>
@@ -351,38 +413,16 @@
         <rect>
          <x>10</x>
          <y>90</y>
-         <width>781</width>
-         <height>138</height>
+         <width>641</width>
+         <height>150</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>Material:</string>
-          </property>
-         </widget>
+        <item row="0" column="1" colspan="2">
+         <widget class="QLineEdit" name="line_edit_material"/>
         </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>Organico?</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1" colspan="2">
-         <widget class="QPushButton" name="push_button_salvar">
-          <property name="text">
-           <string>Salvar</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>Quantidade (kg):</string>
-          </property>
-         </widget>
+        <item row="1" column="1" colspan="2">
+         <widget class="QLineEdit" name="line_edit_quantidade"/>
         </item>
         <item row="2" column="1">
          <widget class="QRadioButton" name="radio_button_sim">
@@ -398,11 +438,33 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="1" colspan="2">
-         <widget class="QLineEdit" name="line_edit_quantidade"/>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Quantidade (kg):</string>
+          </property>
+         </widget>
         </item>
-        <item row="0" column="1" colspan="2">
-         <widget class="QLineEdit" name="line_edit_material"/>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Organico?</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Material:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" colspan="2">
+         <widget class="QPushButton" name="push_button_salvar">
+          <property name="text">
+           <string>Salvar</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -464,11 +526,108 @@
         </property>
        </widget>
       </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>90</y>
+         <width>152</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="push_button_voltar_pric">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Home</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="push_button_go_list">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Ver dados já cadastrados</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </widget>
    </widget>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>line_edit_login</tabstop>
+  <tabstop>line_edit_senha</tabstop>
+  <tabstop>push_button_entrar</tabstop>
+  <tabstop>pushButton_fechar_msg_login</tabstop>
+  <tabstop>push_button_listar</tabstop>
+  <tabstop>push_button_cadastro</tabstop>
+  <tabstop>push_button_logoff</tabstop>
+  <tabstop>push_button_alterar</tabstop>
+  <tabstop>push_button_deletar</tabstop>
+  <tabstop>table_widget_residuos</tabstop>
+  <tabstop>line_edit_material</tabstop>
+  <tabstop>line_edit_quantidade</tabstop>
+  <tabstop>radio_button_sim</tabstop>
+  <tabstop>radio_button_nao</tabstop>
+  <tabstop>push_button_msg_fechar</tabstop>
+ </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>push_button_msg_fechar</sender>
+   <signal>clicked()</signal>
+   <receiver>frame_msg_erro</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>781</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>817</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
