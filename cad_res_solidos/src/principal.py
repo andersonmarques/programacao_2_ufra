@@ -1,6 +1,7 @@
 import sys
 
 from model.residuo_solido import Residuo_Solido
+from files.gerenciador_arq import Gerente_Arquivos
 
 from gui_principal import Ui_MainWindow
 
@@ -39,6 +40,8 @@ class Principal(Ui_MainWindow, QMainWindow):
         self.push_button_voltar.setIcon(QIcon('img/home-button.png'))
         self.push_button_voltar_pric.setIcon(QIcon('img/home-button.png'))
         self.push_button_go_list.setIcon(QIcon('img/table.png'))
+
+        self.gerente_arquivos = Gerente_Arquivos()
         
     
     def salvar_dados(self):
@@ -53,26 +56,21 @@ class Principal(Ui_MainWindow, QMainWindow):
             self.frame_msg_erro.show()
         else:
             self.lista_residuos.append(residuo)
+            self.gerente_arquivos.salvar_em_arquivo(residuo)
             self.label_erro.setText('Dados salvo com sucesso!')
             self.frame_msg_erro.show()
             # self.limpar_campos()
             self.line_edit_material.setFocus()
             self.enviar_dados_tabela()
 
+
     def enviar_dados_tabela(self):
         cont_linhas = 0
-        self.table_widget_residuos.setRowCount(
-            len(self.lista_residuos))
+        self.table_widget_residuos.setRowCount(len(self.lista_residuos))
         for ref_obj in self.lista_residuos:
-            self.table_widget_residuos.setItem(
-                cont_linhas, 0, QTableWidgetItem(
-                ref_obj.material) )
-            self.table_widget_residuos.setItem(
-                cont_linhas, 1, QTableWidgetItem(
-                str(ref_obj.quantidade)) )
-            self.table_widget_residuos.setItem(
-                cont_linhas, 2, QTableWidgetItem(
-                str('Sim' if ref_obj.organico else 'Não')) )
+            self.table_widget_residuos.setItem(cont_linhas, 0, QTableWidgetItem(ref_obj.material))
+            self.table_widget_residuos.setItem(cont_linhas, 1, QTableWidgetItem(str(ref_obj.quantidade)))
+            self.table_widget_residuos.setItem(cont_linhas, 2, QTableWidgetItem(str('Sim' if ref_obj.organico else 'Não')))
             cont_linhas += 1
 
     def set_label_img(self, label: QLabel, end_img: str):

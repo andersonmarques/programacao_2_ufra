@@ -1,6 +1,6 @@
 # Cria uma fila com três elementos.
 from collections import deque
-fila = deque([])
+fila = deque([])#criando uma FILA vazia
 # fila = deque(["Banana", "Maçã", "Pera"])
 # print("Fila: ", fila)
 
