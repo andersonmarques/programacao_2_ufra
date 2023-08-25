@@ -1,2 +1,4 @@
-Material: tttt | Quantidade: 777 | É organico? sim
-Material: 8888888 | Quantidade: 777 | É organico? não
+A	 10	 sim
+B	 2	 não
+C	 3	 sim
+

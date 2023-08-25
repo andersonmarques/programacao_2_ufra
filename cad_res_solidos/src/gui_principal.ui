@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>884</width>
+    <width>921</width>
     <height>676</height>
    </rect>
   </property>
@@ -19,12 +19,12 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>861</width>
+      <width>891</width>
       <height>631</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page_login">
      <widget class="QFrame" name="frame_2">
@@ -366,11 +366,26 @@
        </item>
        <item row="1" column="0" colspan="2">
         <widget class="QTableWidget" name="table_widget_residuos">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="sizePolicy">
           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
          </property>
          <column>
           <property name="text">
@@ -398,7 +413,7 @@
        <rect>
         <x>30</x>
         <y>30</y>
-        <width>811</width>
+        <width>861</width>
         <height>241</height>
        </rect>
       </property>
@@ -531,11 +546,14 @@
         <rect>
          <x>660</x>
          <y>90</y>
-         <width>152</width>
+         <width>192</width>
          <height>151</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
         <item>
          <widget class="QPushButton" name="push_button_voltar_pric">
           <property name="sizePolicy">
@@ -546,7 +564,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>150</width>
+            <width>190</width>
             <height>0</height>
            </size>
           </property>
@@ -565,7 +583,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>150</width>
+            <width>190</width>
             <height>0</height>
            </size>
           </property>

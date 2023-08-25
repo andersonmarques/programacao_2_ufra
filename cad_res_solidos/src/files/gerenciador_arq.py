@@ -1,11 +1,11 @@
 class Gerente_Arquivos:
 
-    def salvar_em_arquivo(self, conteudo):
+    def salvar_em_arquivo(self, conteudo, acao = 'a'):
             saida = f'{conteudo}\n'
             #w: escrever
             #r: ler
             #a: adicionar uma linha ao final de um arquivo (com conteudo)
-            with open('arquivo.txt', 'a', encoding='UTF-8') as arq:            
+            with open('arquivo.txt', acao, encoding='UTF-8') as arq:            
                 arq.write(saida)
 
     def leitor_arquivo_1(self, dir_arquivo: str):
