@@ -1,4 +1,3 @@
-A	 10	 sim
-B	 2	 não
-C	 3	 sim
+teste1	 111	 sim
+teste	 23	 não
 

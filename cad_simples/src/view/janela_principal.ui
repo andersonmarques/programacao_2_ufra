@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>409</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>9</y>
+      <width>791</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>761</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page_cadastro">
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>365</width>
+         <height>261</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Nome:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="push_button_salvar">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(170, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>Salvar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="2">
+         <widget class="QLineEdit" name="line_edit_nome"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="push_button_deletar">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 96, 117);</string>
+          </property>
+          <property name="text">
+           <string>Deletar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="push_button_alterar">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 127);</string>
+          </property>
+          <property name="text">
+           <string>Alterar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QLabel" name="label_img_topo">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>250</horstretch>
+            <verstretch>250</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>90</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Futura imagem</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QTableWidget" name="table_widget_nomes">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>70</y>
+         <width>331</width>
+         <height>192</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>Nomes</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="label_erro">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>651</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 96, 117);</string>
+       </property>
+       <property name="text">
+        <string>Erros</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_login"/>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

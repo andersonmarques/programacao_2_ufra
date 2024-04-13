@@ -260,7 +260,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stacked_widget.setCurrentIndex(3)
+        self.stacked_widget.setCurrentIndex(2)
         self.push_button_msg_fechar.clicked.connect(self.frame_msg_erro.hide) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.line_edit_login, self.line_edit_senha)

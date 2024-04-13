@@ -1,0 +1,4 @@
+teste1	 1	 sim
+teste 3	 2	 não
+novo	 58	 não
+

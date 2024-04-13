@@ -1,10 +1,15 @@
 from usina import Usina
+x = 5
 # Instanciando um objeto da classe Usina
-minha_usina: Usina = Usina()
-minha_usina.tipo = 'Hidrelétrica'
-minha_usina.nome = 'Capanemaipu'
-
-print(f'Endereço do objeto: {minha_usina}')
-print(minha_usina.tipo)
-minha_usina.ligar_turbinas(True)
+referencia_obj: Usina = Usina()#metodo constutor
+print(referencia_obj)
+referencia_obj.tipo = 'Hidrelétrica'
+referencia_obj.nome = 'Capanemaipu'
+print(referencia_obj.nome)
+print(referencia_obj.tipo)
+# print(f'Endereço do objeto: {minha_variavel}')
+# print(minha_variavel.tipo)
+# minha_variavel.ligar_turbinas(True)
+outro_obj = Usina("Ouricuripu")
+print(outro_obj.nome)
 

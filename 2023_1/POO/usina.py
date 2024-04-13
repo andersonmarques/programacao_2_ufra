@@ -1,7 +1,7 @@
 class Usina:
     # Atributos ou características ou propriedades
-    def __init__(self):
-        self.nome: str = ''
+    def __init__(self, nome = ''):#inicializar o obj
+        self.nome: str = nome
         self.tipo: str = ''
         self.quant_turbinas: int = 0
         self.quant_vertedouros: int = 0
